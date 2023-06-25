@@ -8,13 +8,13 @@ a = 1 #ゴム曲がりの幅
 
 mb = 600 #βアクチン数
 MB = 100 #αSMAの収束値
-r = 0.5 #自然増加率
-mb0 = 30 #初期結合数
+r = 0.01 #自然増加率
+mb0 = 1 #初期結合数
 
 N = mb
 Na = N*a
 
-x = np.linspace(0, 200, 1000)
+x = np.linspace(0, 500, 1000)
 
 #ゴムモデルエントロピー
 S1 = k*N*(np.log(2)-1/2*(1+x/Na)*np.log(1+x/Na)-1/2*(1-x/Na)*np.log(1-x/Na))
@@ -32,12 +32,12 @@ S = S1 + S2
 
 plt.plot(x, S1, label='S1', color='red')
 plt.plot(x, S2, label='S2', color='blue')
-plt.plot(x, S, label='S', color='black')
+plt.plot(x, S, label='Stotal', color='black')
 
 plt.xlabel('l',fontsize=20)
 plt.ylabel('S',fontsize=20)
 
-plt.savefig('entropy_SS1S2.png')
+plt.savefig('paturn2_entropy_SS1S2.png')
 
 plt.legend()
 plt.show()
