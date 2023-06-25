@@ -37,7 +37,7 @@ plt.plot(x, S, label='Stotal', color='black')
 plt.xlabel('l',fontsize=20)
 plt.ylabel('S',fontsize=20)
 
+plt.legend()
 plt.savefig('paturn2_entropy_SS1S2.png')
 
-plt.legend()
 plt.show()
